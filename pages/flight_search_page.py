@@ -1,0 +1,19 @@
+from playwright.sync_api import expect, Page
+import re
+
+class FlightSearchPage:
+    
+    def __init__(self, page: Page):
+        self.page = page
+
+    def verifyFlightLocations(self, origin, destination):
+        expect(self.page.get_by_role("link", name=origin + " - " + destination)).to_be_visible()
+
+    def verifyFlightType(self):
+        expect(self.page.locator("div").filter(has_text=re.compile(r"^Round Trip$"))).to_be_visible()
+
+    def verifyFlightDate(self, date):
+        expect(self.page.locator("#main_nav div").filter(has_text=date)).to_be_visible()
+
+    def verifyPassengers(self, passCount):
+        expect(self.page.locator("div").filter(has_text=re.compile(rf"^{passCount} Passengers$"))).to_be_visible()

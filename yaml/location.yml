@@ -1,0 +1,9 @@
+# List of locations
+
+ATL:
+  insert_text: "ATL"
+  full_text: "ATL Atlanta, GA"
+
+HNL:
+  insert_text: "HNL"
+  full_text: "HNL Honolulu, HI"
