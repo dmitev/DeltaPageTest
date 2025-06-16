@@ -4,7 +4,7 @@ Prerequisite installs for running the test scripts:
  1. python
  2. pytest
  3. pytest-playwright
- 4. playwright install (browser isntallation)
+ 4. playwright install (browser installation)
  5. pyyaml
 
 Recommended IDE - VSCode
