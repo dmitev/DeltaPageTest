@@ -1,11 +1,8 @@
 from playwright.sync_api import Page
 
 class LocationAndLanguagesPrompt:
-    
-    def __init__(self, page: Page):
-        pass
 
-    def isPageShown(page: Page):
+    def is_page_shown(page: Page):
         """
         Checks if the page is displayed
         Paremeters
@@ -19,7 +16,7 @@ class LocationAndLanguagesPrompt:
             print("No location page is shown")
             return False
 
-    def selectUS(page: Page):
+    def select_us(page: Page):
         """
         Selects the US locale and English language
         Paremeters

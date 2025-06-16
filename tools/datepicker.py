@@ -1,33 +1,30 @@
 import datetime
 
 class DateSelector:
-    
-    def __init__(self):
-         pass
 
-    def getTodayDate():
+    def get_today_date():
         """Get today's date"""
         return datetime.datetime.now()
 
-    def getOneWeekFromToday():
+    def get_one_week_from_today():
         """Get a day a week from today"""
-        today = DateSelector.getTodayDate()
+        today = DateSelector.get_today_date()
         return today + datetime.timedelta(days=7)
     
-    def formatDate(dateToFormat: datetime):
+    def format_date(date_to_format: datetime):
         """
         Formats a date for the seach of a round trip flight
         Paremeters
-        dateToFormat : datetime
+        date_to_format : datetime
             date to be formatted
         """ 
-        return (str(dateToFormat.day) + " " + dateToFormat.strftime("%B") + " " + str(dateToFormat.year) + ", " + dateToFormat.strftime("%A"))
+        return (str(date_to_format.day) + " " + date_to_format.strftime("%B") + " " + str(date_to_format.year) + ", " + date_to_format.strftime("%A"))
     
-    def formatShortDate(dateToFormat: datetime):
+    def format_short_date(date_to_format: datetime):
         """
         Closes the GDPR screen
         Paremeters
-        dateToFormat : datetime
+        date_to_format : datetime
             date to be formatted
         """ 
-        return (dateToFormat.strftime("%b") + " " + str(dateToFormat.day))
+        return (date_to_format.strftime("%b") + " " + str(date_to_format.day))

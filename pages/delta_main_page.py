@@ -32,15 +32,15 @@ class DeltaMainPage(DateSelector):
     def setRoundTripDate(self):
         """Set start and end dates for a round trip flight"""
         self.page.get_by_role("button", name=" departureDate returnDate").click()
-        today = DateSelector.getTodayDate()
-        todayFormat = DateSelector.formatDate(dateToFormat=today)
-        oneWeek = DateSelector.getOneWeekFromToday()
-        oneWeekFormat = DateSelector.formatDate(dateToFormat=oneWeek)
-        self.page.get_by_role("link", name=todayFormat).click()
-        self.page.get_by_role("link", name=oneWeekFormat).click()
+        today = DateSelector.get_today_date()
+        today_format = DateSelector.format_date(today)
+        one_week = DateSelector.get_one_week_from_today()
+        one_week_format = DateSelector.format_date(one_week)
+        self.page.get_by_role("link", name=today_format).click()
+        self.page.get_by_role("link", name=one_week_format).click()
         self.page.get_by_role("button", name="done").click()
 
-    def changePassengers(self, passCount: int):
+    def changePassengers(self, pass_count: int):
         """
         Changes the amount of passengers
         Paremeters
@@ -48,12 +48,12 @@ class DeltaMainPage(DateSelector):
             number of passengers
         """          
         self.page.get_by_label("Passenger").get_by_text("Passenger").click()
-        if passCount == 1:
-            passengers = str(passCount) + " Passenger"        
-        if passCount > 1:
-            passengers = str(passCount) + " Passengers"
+        if pass_count == 1:
+            passengers = str(pass_count) + " Passenger"
+        if pass_count > 1:
+            passengers = str(pass_count) + " Passengers"
         else:
-            raise Exception("Invalid integer provided for passCount = " + str(passCount))
+            raise ValueError("Invalid integer provided for pass_count = " + str(pass_count))
         self.page.get_by_role("option", name=passengers).click()
 
     def pressSearchButton(self):

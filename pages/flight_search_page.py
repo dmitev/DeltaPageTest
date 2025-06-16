@@ -6,7 +6,7 @@ class FlightSearchPage:
     def __init__(self, page: Page):
         self.page = page
 
-    def verifyFlightLocations(self, origin: str, destination: str):
+    def verify_flight_locations(self, origin: str, destination: str):
         """
         Verification method for flight locations
         Paremeters
@@ -17,11 +17,11 @@ class FlightSearchPage:
         """
         expect(self.page.get_by_role("link", name=origin + " - " + destination)).to_be_visible()
 
-    def verifyFlightType(self):
+    def verify_flight_type(self):
         """Verification method for flight type (one way, round trip or multi-city)"""
         expect(self.page.locator("div").filter(has_text=re.compile(r"^Round Trip$"))).to_be_visible()
 
-    def verifyFlightDate(self, date: str):
+    def verify_flight_date(self, date: str):
         """
         Verification method for flight date
         Paremeters
@@ -30,11 +30,11 @@ class FlightSearchPage:
         """
         expect(self.page.locator("#main_nav div").filter(has_text=date)).to_be_visible()
 
-    def verifyPassengers(self, passCount: int):
+    def verify_passengers(self, pass_count: int):
         """
         Verification method for flight passenger count
         Paremeters
         passCount : int
             number of passengers
         """
-        expect(self.page.locator("div").filter(has_text=re.compile(rf"^{passCount} Passengers$"))).to_be_visible()
+        expect(self.page.locator("div").filter(has_text=re.compile(rf"^{pass_count} Passengers$"))).to_be_visible()

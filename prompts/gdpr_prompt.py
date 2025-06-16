@@ -1,11 +1,8 @@
 from playwright.sync_api import Page
 
 class GdprPrompt:
-    
-    def __init__(self):
-        pass
 
-    def closeGdprScreen(page: Page):
+    def close_gdpr_screen(page: Page):
         """
        Closes the GDPR screen
         Paremeters
