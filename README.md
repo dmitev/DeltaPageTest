@@ -8,6 +8,7 @@ Prerequisite installs for running the test scripts:
  5. pyyaml
 
 Recommended IDE - VSCode
+
 How to execute:
  1. Clone the repo
  2. Set up a venv (https://docs.python.org/3/library/venv.html)
