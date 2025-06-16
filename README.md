@@ -16,5 +16,5 @@ How to execute:
  4. Run the pytest test_booking.py
 
 Additional info: 
-pytest.ini file contains presets for the pytest run that can be change. It's currently set to run in verbose, on chromium browser and to display the run on the screen in a slow motion.
-All of that is set for an ease of use for the manual runner to see what's happening on the screen and can be disabled at any point for a must faster test run.
+pytest.ini file contains presets for the pytest run that can be changed. It's currently set to run in verbose, on chromium browser and to display the run on the screen in a slow motion.
+All of that is set for ease of use for the manual runner to see what's happening on the screen and can be disabled at any point for a much faster test run.
