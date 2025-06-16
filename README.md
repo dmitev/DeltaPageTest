@@ -6,6 +6,7 @@ Prerequisite installs for running the test scripts:
  3. pytest-playwright
  4. playwright install (browser isntallation)
  5. pyyaml
+
 Recommended IDE - VSCode
 How to execute:
  1. Clone the repo
