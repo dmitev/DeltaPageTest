@@ -6,4 +6,10 @@ class GdprPrompt:
         pass
 
     def closeGdprScreen(page: Page):
+        """
+       Closes the GDPR screen
+        Paremeters
+        page : Page
+            current page
+        """ 
         page.get_by_role("button", name="Close", exact=True).click()

@@ -4,7 +4,7 @@ from pages.delta_main_page import DeltaMainPage
 from prompts.location_and_languages_prompt import LocationAndLanguagesPrompt
 from pages.flight_search_page import FlightSearchPage
 from tools.datepicker import DateSelector
-from playwright.sync_api import Page, expect
+from playwright.sync_api import Page
 
 
 def test_book_a_roundtrip_from_atl_to_hnl_for_2_passengers(page: Page) -> None:
