@@ -1,4 +1,4 @@
-This is an automation challenge for designing a test cases around "book a flight" feature on delta.com.
+This is an automation challenge for designing a test case around "book a flight" feature on delta.com.
 
 Prerequisite installs for running the test scripts:
  1. python
