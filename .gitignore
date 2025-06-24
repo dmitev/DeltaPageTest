@@ -1,2 +1,8 @@
 /.pytest_cache
 /__pycache__
+pages/__pycache__/__init__.cpython-313.pyc
+pages/__pycache__/delta_main_page.cpython-313.pyc
+pages/__pycache__/flight_search_page.cpython-313.pyc
+prompts/__pycache__/gdpr_prompt.cpython-313.pyc
+prompts/__pycache__/location_and_languages_prompt.cpython-313.pyc
+tools/__pycache__/datepicker.cpython-313.pyc

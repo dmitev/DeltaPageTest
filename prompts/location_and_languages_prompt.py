@@ -10,7 +10,7 @@ class LocationAndLanguagesPrompt:
             current page
         """ 
         welcome_screen = page.get_by_text("Welcome to Delta")
-        if welcome_screen.is_visible:
+        if welcome_screen.is_visible():
             return True
         else:
             print("No location page is shown")
