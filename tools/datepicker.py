@@ -5,6 +5,10 @@ class DateSelector:
     def get_today_date():
         """Get today's date"""
         return datetime.datetime.now()
+    
+    def get_tomorrow_date():
+        """Get tomorrow's date"""
+        return DateSelector.get_today_date() + datetime.timedelta(days=1)
 
     def get_one_week_from_today():
         """Get a day a week from today"""

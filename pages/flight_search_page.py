@@ -15,7 +15,7 @@ class FlightSearchPage:
         destination : str
             flight destination name
         """
-        expect(self.page.get_by_role("link", name=origin + " - " + destination)).to_be_visible()
+        expect(self.page.get_by_text(origin + destination)).to_be_visible()
 
     def verify_flight_type(self):
         """Verification method for flight type (one way, round trip or multi-city)"""

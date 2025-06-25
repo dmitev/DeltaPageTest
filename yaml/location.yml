@@ -7,3 +7,7 @@ ATL:
 HNL:
   insert_text: "HNL"
   full_text: "HNL Honolulu, HI"
+
+AMS:
+  insert_text: "AMS"
+  full_text: "Amsterdam, Netherlands"
